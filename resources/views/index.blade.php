@@ -17,14 +17,18 @@
             <div class="row">
                 <div class="col-5">
                     <label>Из</label>
-                    <select name="rateFrom" id="rateFrom"></select>
+                    <select name="rateFrom" id="rateFrom">
+                        <option>Выбрать</option>
+                    </select>
                 </div>
                 <div class="col-2">
                     <button type="submit" class="btn btn-primary" id="convertButton">Перевести</button>
                 </div>
                 <div class="col-5">
                     <label for="rateTo">В</label>
-                    <select name="rateTo" id="rateTo"></select>
+                    <select name="rateTo" id="rateTo">
+                        <option>Выбрать</option>
+                    </select>
                 </div>
                 <input type="hidden" name="pair" id="pair"/>
             </div>
