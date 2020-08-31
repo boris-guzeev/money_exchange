@@ -3,14 +3,14 @@
      *  Обработка нажатия на Конвертацию
      */
     $('#exchangeForm').submit(function () {
-
         var data = $(this).serialize();
-        data.pair =
         $.ajax({
             url: '/exchange',
             data: data,
             dataType: 'json',
             success: function (data) {
+                $('#result').text(data);
+                $('.currency').text($('#rateTo option:selected').val());
             }
         });
         return false;

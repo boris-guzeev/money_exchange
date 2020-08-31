@@ -32,7 +32,7 @@
         <div class="col-5">
             <label>Вы получите:</label>
             <p>
-                <span class="result"></span> &#8381;
+                <span id="result"></span> <span class="currency"></span>
             </p>
             <p>
                 1 <span id="currencyLabel">$</span> = <span id="currancyRate"></span> &#8381;
