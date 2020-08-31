@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@index');
+Route::get('/exchange', 'ConvertController@exchange');
+Route::get('/get-pairs', 'ConvertController@getpairs');
