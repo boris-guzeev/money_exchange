@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use \Illuminate\Support\Facades\DB;
 
-class FillRubratesTable extends Migration
+class FillRatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,19 @@ class FillRubratesTable extends Migration
     {
         $data = [
             [
-                'currency' => 'USD',
-                'value' => 75.50
+                'pair' => 'USD/RUB',
+                'rate' => 74.00
             ],
             [
-                'currency' => 'EUR',
-                'value' => 90
+                'pair' => 'EUR/USD',
+                'rate' => 1.20
+            ],
+            [
+                'pair' => 'EUR/RUB',
+                'rate' => 88.00
             ]
         ];
-        DB::table('rub_rates')->insert(
+        DB::table('rates')->insert(
             $data
         );
     }
@@ -34,6 +38,6 @@ class FillRubratesTable extends Migration
      */
     public function down()
     {
-        DB::table('rub_rates')->truncate();
+        DB::table('rates')->truncate();
     }
 }
