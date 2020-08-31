@@ -57,4 +57,18 @@
             $('#pair').val($('#rateTo').val() + '/' + $('#rateFrom').val());
         }
     });
+
+    /**
+     * Взаимоисключение одинаковых валют
+     */
+    $('#rateFrom, #rateTo').on('change', function (event) {
+        let selectedRate = $(this).find('option:selected').val();
+        if ($(event.target).attr('id') == 'rateFrom') {
+            $('#rateTo option').css('display', 'block');
+            $('#rateTo option[value="' + selectedRate + '"]').css('display', 'none');
+        } else if ($(event.target).attr('id') == 'rateTo') {
+            $('#rateFrom option').css('display', 'block');
+            $('#rateFrom option[value="' + selectedRate + '"]').css('display', 'none');
+        }
+    });
 })();
