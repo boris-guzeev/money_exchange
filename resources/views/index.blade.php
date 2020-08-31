@@ -39,7 +39,7 @@
                 <span id="result"></span> <span class="currency"></span>
             </p>
             <p>
-                1 <span id="currencyLabel">$</span> = <span id="currancyRate"></span> &#8381;
+                1 <span id="currencyName">$</span> = <span id="currancyRate"></span>
             </p>
         </div>
     </div>
