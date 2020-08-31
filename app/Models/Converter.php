@@ -32,7 +32,7 @@ class Converter
         } else if ($pair[1] == $currency){
             return $rate * $sum;
         } else {
-            throw new \ErrorException('Corrency is not found!');
+            throw new \ErrorException('Currency is not found!');
         }
     }
 }
