@@ -7,7 +7,6 @@
         $.ajax({
             url: '/exchange',
             data: data,
-            dataType: 'json',
             success: function (data) {
                 $('#result').text(data);
                 $('.currency').text($('#rateTo option:selected').val());
