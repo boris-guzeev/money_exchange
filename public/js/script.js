@@ -10,6 +10,19 @@
             success: function (data) {
                 $('#result').text(data);
                 $('.currency').text($('#rateTo option:selected').val());
+
+                $.ajax({
+                    url: '/exchange',
+                    data: {
+                        sum: 1,
+                        rateFrom: $('#rateFrom option:selected').val(),
+                        rateTo: $('#rateTo option:selected').val(),
+                        pair: $('#pair').val()
+                    },
+                    success: function (data) {
+                        $('#currencyRate').text(data);
+                    }
+                });
             }
         });
         return false;
@@ -69,5 +82,10 @@
             $('#rateFrom option').css('display', 'block');
             $('#rateFrom option[value="' + selectedRate + '"]').css('display', 'none');
         }
+    });
+
+    // добавление названия валюты
+    $('#rateTo').on('change', function () {
+        $('#currencyName').text($(this).children('option:selected:not(:first-child)').val());
     });
 })();
