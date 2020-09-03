@@ -16,9 +16,7 @@ services:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD:
-    volumes:
-      - ${DB_PATH_HOST}:/var/lib/mysql
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
 
   adminer:
     image: adminer
